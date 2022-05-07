@@ -45,7 +45,8 @@ router.get("/blogpost/:id", (req, res) => {
         nest: true,
     }).then(blogData => {
         const data = blogData.get({ plain: true })
-        console.log(blogData)
+        data.loggedIn = req.session.user ? true : false
+        data.username = req.session.user?.username
         res.render("blogpost", data)
     })
 })
