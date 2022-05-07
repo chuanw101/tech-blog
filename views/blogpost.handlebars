@@ -7,9 +7,9 @@
     <p>By: {{User.username}} on {{createdAt}}</p>
     <hr>
 {{/each}}
-<form action="" id="newComment">
-    <textarea id="comment" blogId={{id}} cols="30" rows="10" placeholder="comment here"></textarea>
-    <button>Comment</button>
+<form action="" id="newComment" class="form-control mb-3">
+    <textarea id="comment" blogId={{id}} rows="3" placeholder="comment here" class="form-control mb-2"></textarea>
+    <button class = "btn btn-dark">Comment</button>
 </form>
 
 <script src="/js/blogpost.js"></script>

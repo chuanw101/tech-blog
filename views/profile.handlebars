@@ -1,14 +1,14 @@
 <h1>Welcome back {{username}}</h1>
 <h2>All your blogs:</h2>
-<form action="" id="newBlog">
-    <input type="text" id="title" placeholder="title">
-    <textarea id="body" cols="30" rows="10"></textarea>
-    <button>Submit</button>
+<form action="" id="newBlog" class="form-control">
+    <input type="text" id="title" placeholder="title" class="form-control mb-2">
+    <textarea id="body" rows="5" class="form-control mb-2"></textarea>
+    <button class="btn btn-dark">Post Blog</button>
 </form>
 {{#each Blogs}}
     <h3>{{title}}</h3>
     <p>{{body}}</p>
-    <button class="deleteBtn" value={{id}}>delete</button>
+    <button class="deleteBtn btn btn-secondary" value={{id}}>delete</button>
     <hr>
 {{/each}}
 
