@@ -3,7 +3,9 @@ const router = express.Router();
 const { User, Blog, Comment } = require('../models');
 
 router.get("/", (req, res) => {
-    Blog.findAll().then(blogs => {
+    Blog.findAll({
+        include: User
+    }).then(blogs => {
         console.log(blogs)
         const hbsBlogs = blogs.map(blog => blog.get({ plain: true }))
         console.log("==========")

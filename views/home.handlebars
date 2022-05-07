@@ -1,8 +1,10 @@
 <h1>Home page</h1>
+<hr>
 {{#each blogs}}
 <div class="blogPost" value={{id}}>
     <h3 value={{id}}>{{title}}</h3>
     <p value={{id}}>{{body}}</p>
+    <p value={{id}}>Posted by <span class="text-info">{{User.username}}</span> on {{updatedAt}}</p>
 </div>
 <hr>
 {{/each}}
