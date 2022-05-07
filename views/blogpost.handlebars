@@ -1,7 +1,14 @@
 <h3>{{title}}</h3>
 <p>{{body}}</p>
 <hr>
+{{#each Comments}}
+    <p>{{comment}}</p>
+    <p>By: {{User.username}} on {{createdAt}}</p>
+    <hr>
+{{/each}}
 <form action="" id="newComment">
-    <textarea id="body" cols="30" rows="10" placeholder="comment here"></textarea>
+    <textarea id="comment" blogId={{id}} cols="30" rows="10" placeholder="comment here"></textarea>
     <button>Comment</button>
 </form>
+
+<script src="/js/blogpost.js"></script>

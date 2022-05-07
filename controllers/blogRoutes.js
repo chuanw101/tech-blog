@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const {User,Blog} = require("../models");
+const {Blog} = require("../models");
 
 
 //find all
