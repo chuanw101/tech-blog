@@ -9,7 +9,7 @@ User.hasMany(Comment);
 Comment.belongsTo(User);
 
 Blog.hasMany(Comment);
-Comment.BelongsTo(Blog);
+Comment.belongsTo(Blog);
 
 module.exports = {
     User,
